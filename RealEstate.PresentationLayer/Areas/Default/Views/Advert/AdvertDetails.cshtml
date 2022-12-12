@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+
+@await Component.InvokeAsync("_AdvertHeadPartial")
+
+<body>
+
+    @await Component.InvokeAsync("_AdvertHeaderPartial")
+    <!-- //header -->
+    <!-- inner banner -->
+    @await Component.InvokeAsync("_AdvertBannerPartial")
+    <!-- //inner banner -->
+    <!-- courses section -->
+        <br />
+
+    @await Component.InvokeAsync("_CommentListByAdvert", new{id = ViewBag.i}) @*sorunlu yer*@
+        <br />
+    <!-- //courses section -->
+    <br />
+    @await Html.PartialAsync("~/Areas/Default/Views/Advert/PartialAddComment.cshtml")
+    <br />
+    <!-- about 3grids section -->
+    <!-- //about 3grids section -->
+    <!-- footer -->
+    @await Component.InvokeAsync("_AdvertFooterpartial")
+
+    <!-- //footer -->
+    <!-- Js scripts -->
+    <!-- move top -->
+    @await Component.InvokeAsync("_AdvertScriptPartial")
+
+
+</body>
+
+</html>
