@@ -55,6 +55,7 @@
 
   <ItemGroup>
     <Folder Include="NewFolder12\" />
+    <Folder Include="ViewComponents\AboutProducts\" />
     <Folder Include="ViewComponents\Contacts\" />
     <Folder Include="wwwroot\Image\" />
     <Folder Include="wwwroot\pdfreport\" />
