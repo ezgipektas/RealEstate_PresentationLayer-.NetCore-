@@ -10,8 +10,8 @@ using RealEstate.DataAccessLayer.Concrete;
 namespace RealEstate.DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20221118183343_mig-1")]
-    partial class mig1
+    [Migration("20221214204227_mig_create")]
+    partial class mig_create
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -263,6 +263,32 @@ namespace RealEstate.DataAccessLayer.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("RealEstate.EntityLayer.Concrete.Comment", b =>
+                {
+                    b.Property<int>("CommentID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NameSurname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.HasKey("CommentID");
+
+                    b.HasIndex("ProductID");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("RealEstate.EntityLayer.Concrete.Contact", b =>
                 {
                     b.Property<int>("ContactID")
@@ -405,6 +431,17 @@ namespace RealEstate.DataAccessLayer.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("RealEstate.EntityLayer.Concrete.Comment", b =>
+                {
+                    b.HasOne("RealEstate.EntityLayer.Concrete.Product", "Product")
+                        .WithMany("Comments")
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("RealEstate.EntityLayer.Concrete.Product", b =>
                 {
                     b.HasOne("RealEstate.EntityLayer.Concrete.AppUser", "AppUser")
@@ -432,6 +469,11 @@ namespace RealEstate.DataAccessLayer.Migrations
             modelBuilder.Entity("RealEstate.EntityLayer.Concrete.Category", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("RealEstate.EntityLayer.Concrete.Product", b =>
+                {
+                    b.Navigation("Comments");
                 });
 #pragma warning restore 612, 618
         }

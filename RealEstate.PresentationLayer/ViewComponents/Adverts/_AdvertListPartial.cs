@@ -16,7 +16,7 @@ namespace RealEstate.PresentationLayer.ViewComponents.Adverts
         public IViewComponentResult Invoke(int page=1)
         {
            
-            var values = _productService.TGetProductByCategory().ToPagedList(page , 6);
+            var values = _productService.TGetProductByCategory().ToPagedList(page , 3);
             return View(values);
         }
     }

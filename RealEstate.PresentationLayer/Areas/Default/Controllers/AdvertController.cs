@@ -55,7 +55,7 @@ namespace RealEstate.PresentationLayer.Areas.Default.Controllers
         {
             Context context = new Context();
             p.Date = DateTime.Parse(DateTime.Now.ToShortDateString());
-            p.ProductID = 1003;
+            p.ProductID = 1; //Bu yorum kısmı düzeltilecek.
             context.Comments.Add(p);
             context.SaveChanges();
             return RedirectToAction("Index");
