@@ -27,8 +27,8 @@
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="navbar-brand-wrapper d-flex justify-content-center">
                 <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-                    <a class="navbar-brand brand-logo" href="../../index.html"><img src="~/MajesticAdmin-Free-Bootstrap-Admin-Template-master/template/images/logo.svg" alt="logo" /></a>
-                    <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="~/MajesticAdmin-Free-Bootstrap-Admin-Template-master/template/images/logo-mini.svg" alt="logo" /></a>
+                    <a class="navbar-brand brand-logo" href="~/MajesticAdmin-Free-Bootstrap-Admin-Template-master/template/index.html"><img src="~/MajesticAdmin-Free-Bootstrap-Admin-Template-master/template/images/logo.svg" alt="logo" /></a>
+                    <a class="navbar-brand brand-logo-mini" href="~/MajesticAdmin-Free-Bootstrap-Admin-Template-master/template/index.html"><img src="~/MajesticAdmin-Free-Bootstrap-Admin-Template-master/template/images/logo-mini.svg" alt="logo" /></a>
                     <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
                         <span class="mdi mdi-sort-variant"></span>
                     </button>
@@ -57,7 +57,7 @@
                             <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
                             <a class="dropdown-item">
                                 <div class="item-thumbnail">
-                                    <img src="../../images/faces/face4.jpg" alt="image" class="profile-pic">
+                                    <img src="~/MajesticAdmin-Free-Bootstrap-Admin-Template-master/template/images/faces/face4.jpg" alt="image" class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
                                     <h6 class="ellipsis font-weight-normal">
@@ -70,7 +70,7 @@
                             </a>
                             <a class="dropdown-item">
                                 <div class="item-thumbnail">
-                                    <img src="../../images/faces/face2.jpg" alt="image" class="profile-pic">
+                                    <img src="~/MajesticAdmin-Free-Bootstrap-Admin-Template-master/template/images/faces/face2.jpg" alt="image" class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
                                     <h6 class="ellipsis font-weight-normal">
@@ -83,7 +83,7 @@
                             </a>
                             <a class="dropdown-item">
                                 <div class="item-thumbnail">
-                                    <img src="../../images/faces/face3.jpg" alt="image" class="profile-pic">
+                                    <img src="~/MajesticAdmin-Free-Bootstrap-Admin-Template-master/template/images/faces/face3.jpg" alt="image" class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
                                     <h6 class="ellipsis font-weight-normal">
@@ -178,12 +178,27 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="/Product/Index" aria-expanded="false" aria-controls="ui-basic">
+                        <a class="nav-link" data-bs-toggle="collapse" href="/Product/Index/" aria-expanded="false" aria-controls="ui-basic">
                             <i class="mdi mdi-circle-outline menu-icon"></i>
                             <span class="menu-title">İlanlar</span>
                             <i class="menu-arrow"></i>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="/ProductAjax/Index/" aria-expanded="false" aria-controls="ui-basic">
+                            <i class="mdi mdi-circle-outline menu-icon"></i>
+                            <span class="menu-title">Ajax İle İlanlar</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="/Category/Index/" aria-expanded="false" aria-controls="ui-basic">
+                            <i class="mdi mdi-circle-outline menu-icon"></i>
+                            <span class="menu-title">Kategoriler</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="/User/Index/">
                             <i class="mdi mdi-view-headline menu-icon"></i>
@@ -196,25 +211,20 @@
                             <span class="menu-title">Grafikler</span>
                         </a>
                     </li>
+                    
                     <li class="nav-item">
-                        <a class="nav-link" href="../../pages/tables/basic-table.html">
-                            <i class="mdi mdi-grid-large menu-icon"></i>
-                            <span class="menu-title">Mesajlar</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../pages/icons/mdi.html">
+                        <a class="nav-link" href="/Role/Index/">
                             <i class="mdi mdi-emoticon menu-icon"></i>
                             <span class="menu-title">Roller</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                            <i class="mdi mdi-account menu-icon"></i>
+                        <a class="nav-link" href="/Report/Index/">
+                            <i class="mdi mdi-view-headline menu-icon"></i>
                             <span class="menu-title">Dosya İşlemleri</span>
-                            <i class="menu-arrow"></i>
                         </a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="../../documentation/documentation.html">
                             <i class="mdi mdi-file-document-box-outline menu-icon"></i>
@@ -222,7 +232,21 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../documentation/documentation.html">
+                        <a class="nav-link" href="/Message/ReceiverMessage/">
+                            <i class="mdi mdi-file-document-box-outline menu-icon"></i>
+                            <span class="menu-title">Gelen Kutusu</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Message/SenderMessage/">
+                            <i class="mdi mdi-file-document-box-outline menu-icon"></i>
+                            <span class="menu-title">Giden Kutusu</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Message/SendMessage/">
                             <i class="mdi mdi-file-document-box-outline menu-icon"></i>
                             <span class="menu-title">Mail Gönder</span>
                         </a>
@@ -234,7 +258,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../documentation/documentation.html">
+                        <a class="nav-link" href="/Login/LogOut/">
                             <i class="mdi mdi-file-document-box-outline menu-icon"></i>
                             <span class="menu-title">Çıkış Yap</span>
                         </a>
@@ -271,7 +295,7 @@
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
-    <script src="~/MajesticAdmin-Free-Bootstrap-Admin-Template-master/template/vendors/base/vendor.bundle.base.js"></script>
+    @*<script src="~/MajesticAdmin-Free-Bootstrap-Admin-Template-master/template/vendors/base/vendor.bundle.base.js"></script>*@
     <!-- endinject -->
     <!-- Plugin js for this page-->
     <!-- End plugin js for this page-->

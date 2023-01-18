@@ -17,8 +17,8 @@ namespace RealEstate.PresentationLayer.Controllers
         public IActionResult Index(MailRequest p)
         {
             MimeMessage mimeMessage = new MimeMessage();
-            //MAili yollayan
-            MailboxAddress mailboxAddressFrom = new MailboxAddress("Admin RealEstate","eulusoy139@gmail.com");
+            //Maili yollayan
+            MailboxAddress mailboxAddressFrom = new MailboxAddress("Admin RealEstate","ezgi.pkts@hotmail.com");
             mimeMessage.From.Add(mailboxAddressFrom);
 
             //mailin gönderileceği kişi
@@ -32,7 +32,7 @@ namespace RealEstate.PresentationLayer.Controllers
 
             SmtpClient smtpClient = new SmtpClient();   
             smtpClient.Connect("smtp.gmail.com",587,false); // format ve port nmarası   
-            smtpClient.Authenticate("eulusoy@gmail.com", "");
+            smtpClient.Authenticate("ezgi.pkts@hotmail.com", "");
             smtpClient.Disconnect(true);
 
             return View();
