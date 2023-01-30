@@ -16,6 +16,7 @@ namespace RealEstate.PresentationLayer.Controllers
 {
     public class UserController : Controller
     {
+        
         private readonly UserManager<AppUser> _userManager;
         private readonly RoleManager<AppRole> _roleManager;
 
@@ -30,8 +31,6 @@ namespace RealEstate.PresentationLayer.Controllers
             var values = _userManager.Users.ToList();
             return View(values);
         }
-
-
 
         public async Task<IActionResult> DeleteUser(int id)
         {
@@ -97,13 +96,6 @@ namespace RealEstate.PresentationLayer.Controllers
             {
                 return View();
             }
-
-
-
-
-
-
-
 
         }
     }
